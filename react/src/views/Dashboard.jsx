@@ -7,7 +7,7 @@ export default function Dashboard() {
             title="Dashboard" >
             
             
-            DashboardContent
+            Children
             </PageComponent>
         
     );
