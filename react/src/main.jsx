@@ -9,6 +9,7 @@ import Signup from './views/Signup'
 import Surveys from './views/Surveys'
 import GuestLayout from './components/GuestLayout'
 import DefaultLayout from './components/DefaultLayout'
+import { ContextProvider } from './contexts/ConstextProvider'
 const router= createBrowserRouter([
   
 
@@ -17,7 +18,7 @@ const router= createBrowserRouter([
     element: <DefaultLayout/>,
     children:[
       {
-        path:'/dashboard',
+        path:'/dashboard', 
         element:<Navigate to="/" />
     
       },
@@ -55,6 +56,8 @@ const router= createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
   
+  <ContextProvider>
     <RouterProvider router={router}/>
+    </ContextProvider>
   </React.StrictMode>,
 )    
